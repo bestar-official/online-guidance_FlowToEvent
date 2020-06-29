@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+		<meta name="viewport" content="width=device-width">
+
+		<meta name="description" content="オンラインガイダンスイベントまでの流れを説明するページです。">
+		<meta name="keywords" content="BESTAR,美容学生,サロン">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<title>イベントまでの流れ</title>
+		<style type="text/css"></style>
+
+		<!-- <script type="text/javascript">
+		function check_number(){
+			if(form2.free_word2.value.match(/^[0-9]+$/)){
+			alert(form2.free_word2.value);}
+			else{alert("error!");}
+		}
+        </script> -->
+        
+        <!-- jQuery.jsの読み込み -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+        <!-- スムーズスクロール部分の記述 -->
+        <script>
+        $(function(){
+        // #で始まるアンカーをクリックした場合に処理
+        $('a[href^=#]').click(function() {
+            // スクロールの速度
+            var speed = 400; // ミリ秒
+            // アンカーの値取得
+            var href= $(this).attr("href");
+            // 移動先を取得
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            // 移動先を数値で取得
+            var position = target.offset().top;
+            // スムーススクロール
+            $('body,html').animate({scrollTop:position}, speed, 'swing');
+            return false;
+        });
+        });
+        </script>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>
+		<table width="100%" cellspacing="0" cellpadding="0" style="border:0px solid blue;" bgcolor="white" align="center">
+			<header>
+				<img class="logo" src="./images/logo.jpg" alt="logo">
+            </header>
+			<div class="mainview">
+                <div class="title">
+                    <img class="title" src="./images/title.jpg" alt="title">
+                </div>
+                <div class="contents_part">
+                    <a href="#contents01">
+                        <img class="contents" src="./images/contents01.jpg" alt="コンテンツ1">
+                    </a>
+                    <a href="#contents02">
+                        <img class="contents" src="./images/contents02.jpg" alt="コンテンツ2">
+                    </a>
+                    <a href="#contents03">
+                        <img class="contents" src="./images/contents03.jpg" alt="コンテンツ3">
+                    </a>
+                    <a href="#contents04">
+                        <img class="contents" src="./images/contents04.jpg" alt="コンテンツ4">
+                    </a>
+                    <!-- <a href="#contents05">
+                        <img class="contents" src="./images/contents05.jpg" alt="コンテンツ5">
+                    </a> -->
+                </div>
+                <div class="main_part">
+                    <div id="contents01">
+                        <img class="contents" src="./images/main01.jpg" alt="コンテンツ1">
+                    </div>
+                    <div id="contents02">
+                        <img class="contents" src="./images/main02.jpg" alt="コンテンツ1">
+                    </div>
+                    <div id="contents03">
+                        <img class="contents" src="./images/main03.jpg" alt="コンテンツ1">
+                    </div>
+                    <div id="contents04">
+                        <img class="contents" src="./images/main04.jpg" alt="コンテンツ1">
+                    </div>
+                    <!-- <div id="contents05">
+                        <img class="contents" src="./images/main05.jpg" alt="コンテンツ1">
+                    </div> -->
+                </div>
+            </div>
+			<div class="footer">
+                <a href="https://bestar-official.github.io/online-guidance_FlowOfTheDay/">
+                    <img class="last" src="./images/last.jpg" alt="次ページへ">
+                </a>
+                <a href="https://aura-mico.jp/qr-codes/5683/s">
+                    <img class="back_button" src="./images/back_button.jpg" alt="back_button">
+                </a>
+            </div>
+		</table>
+	</body>
+</html>
